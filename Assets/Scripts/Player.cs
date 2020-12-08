@@ -21,4 +21,8 @@ public class Player : MonoBehaviour
         
         rb.MovePosition(newPos);
     }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        FindObjectOfType<GameManager>().endGame();
+    }
 }
